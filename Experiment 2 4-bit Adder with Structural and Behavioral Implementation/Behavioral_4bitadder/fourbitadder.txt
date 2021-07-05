@@ -1,0 +1,22 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_unsigned.ALL;
+entity fourbitadder is
+Port ( A : in STD_LOGIC_VECTOR (3 downto 0);
+B : in STD_LOGIC_VECTOR (3 downto 0);
+S : out STD_LOGIC_VECTOR (3 downto 0);
+C : out STD_LOGIC);
+end fourbitadder;
+architecture Behavioral of fourbitadder is
+Begin
+process(A,B)
+variable X,Y,Z : std_logic_vector (4 downto 0):="00000";
+-- define 5-bit variables to use the fifth bit in the result(Z) as a curry_out.
+Begin
+X:=('0'&A);
+Y:=('0'&B);
+Z:=X+Y;
+S<=Z(3 downto 0);
+C<=Z(4);
+end process;
+end Behavioral;
