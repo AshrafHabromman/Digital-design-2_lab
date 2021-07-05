@@ -1,0 +1,2 @@
+# Digital-design-2_lab
+This repo includes all of our work in the digital design 2 lab. The hardware description language used is VHDL to build the entities and their architectures also testbench part. And using Vivado Design Suite HL WebPACK™ Edition to simulate the design. For the synthesis part, the board used is zedboard. check the link: https://bit.ly/3hG0vNF  Note that all in this repo has implemented by Ra'ed khwayerh and me.
